@@ -3,8 +3,8 @@ name: Deploy Hexo BLog
 on:
   push:
     branches:
-      - src
-      - post
+      - 'src'
+      - 'post'
 
 jobs:
   build:
@@ -34,7 +34,6 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
-          repository: 'HuaLiMao-AQ/Post'
           ref: 'post'
           path: 'source/_posts'
 
