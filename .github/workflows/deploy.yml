@@ -3,8 +3,8 @@ name: Deploy Hexo BLog
 on:
   push:
     branches:
-      - post
       - src
+      - post
 
 jobs:
   build:
