@@ -1,0 +1,16 @@
+name: Push Posts
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.ACTION_TOKEN }}
+          repository: HuaLiMao-AQ/hualimao-aq.github.io
+          event-type: build
